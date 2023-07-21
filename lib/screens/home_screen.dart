@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:bmi_calculator/sections/gender_section.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -31,6 +33,8 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(height: 10),
+          GenderSection(),
         ],
       ),
     );
