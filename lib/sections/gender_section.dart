@@ -44,6 +44,15 @@ class _GenderSectionState extends State<GenderSection> {
                   ),
                   child: Image.asset('assets/images/male.png'),
                 ),
+                Align(
+                  alignment: Alignment.topRight,
+                  child: Icon(
+                    Icons.check,
+                    color: _selectedGender == 'male'
+                        ? Colors.green
+                        : Colors.transparent,
+                  ),
+                ),
                 const Align(
                   alignment: Alignment.bottomCenter,
                   child: Text(
@@ -86,6 +95,15 @@ class _GenderSectionState extends State<GenderSection> {
                     topRight: Radius.circular(6),
                   ),
                   child: Image.asset('assets/images/female.png'),
+                ),
+                Align(
+                  alignment: Alignment.topRight,
+                  child: Icon(
+                    Icons.check,
+                    color: _selectedGender == 'female'
+                        ? Colors.green
+                        : Colors.transparent,
+                  ),
                 ),
                 const Align(
                   alignment: Alignment.bottomCenter,
