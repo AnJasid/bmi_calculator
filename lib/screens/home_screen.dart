@@ -9,7 +9,6 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
         leading: const Icon(Icons.menu),
         actions: const <Widget>[
           Padding(
@@ -18,24 +17,23 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: const Column(
-        children: <Widget>[
-          Padding(
-            padding: EdgeInsets.only(
-              left: 25,
-              top: 15,
-            ),
-            child: Text(
+      body: const Padding(
+        padding: EdgeInsets.fromLTRB(18, 18, 18, 18),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
               'BMI Calculator',
               style: TextStyle(
-                fontSize: 33,
+                fontSize: 30,
                 fontWeight: FontWeight.bold,
+                color: Colors.white,
               ),
             ),
-          ),
-          SizedBox(height: 10),
-          GenderSection(),
-        ],
+            SizedBox(height: 30),
+            GenderSection(),
+          ],
+        ),
       ),
     );
   }
