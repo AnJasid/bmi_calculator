@@ -1,3 +1,4 @@
+import 'package:bmi_calculator/sections/height_section.dart';
 import 'package:bmi_calculator/sections/weight_section.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,7 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       body: const Padding(
-        padding: EdgeInsets.fromLTRB(25, 18, 25, 18),
+        padding: EdgeInsets.fromLTRB(25, 70, 25, 18),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
@@ -56,6 +57,18 @@ class HomeScreen extends StatelessWidget {
             ),
             SizedBox(height: 5),
             WeightSection(),
+            SizedBox(height: 30),
+            // height section
+            Text(
+              'Height',
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            SizedBox(height: 5),
+            HeightSection(),
           ],
         ),
       ),

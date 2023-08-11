@@ -1,31 +1,34 @@
 import 'package:flutter/material.dart';
 
-class WeightSection extends StatefulWidget {
-  const WeightSection({super.key});
+class HeightSection extends StatefulWidget {
+  const HeightSection({super.key});
 
   @override
-  State<WeightSection> createState() => _WeightSectionState();
+  State<HeightSection> createState() => _HeightSectionState();
 }
 
-class _WeightSectionState extends State<WeightSection> {
-  String _selectedWeightUnit = 'Kilograms (KG)';
-  int _countWeight = 0;
-  final List<String> _weightUnits = [
-    'Kilograms (KG)',
-    'Pounds (lb)',
+class _HeightSectionState extends State<HeightSection> {
+  String _selectedHeightUnit = 'Centimeters (cm)';
+  int _countHeight = 0;
+  final List<String> _heightUnits = [
+    'Centimeters (cm)',
+    'Meters (m)',
+    'Feet (ft)',
+    'Inches (in)',
   ];
-  // this method is to increase the number of weight
-  void _incCountWeight() {
+
+  // this method is to increase the number of height
+  void _incCountHeight() {
     setState(() {
-      _countWeight = _countWeight + 1;
+      _countHeight = _countHeight + 1;
     });
   }
 
-  // this method is to decrease the number of weight
-  void _decCountWeight() {
-    if (_countWeight > 0) {
+// this method is to decrease the number of height
+  void _decCountHeight() {
+    if (_countHeight > 0) {
       setState(() {
-        _countWeight = _countWeight - 1;
+        _countHeight = _countHeight - 1;
       });
     }
   }
@@ -46,25 +49,25 @@ class _WeightSectionState extends State<WeightSection> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              // icon button to decrease number of weight
+              // icon button to decrease number of height
               GestureDetector(
-                onTap: _decCountWeight,
+                onTap: _decCountHeight,
                 child: const Icon(Icons.do_disturb_on),
               ),
               // show the number of weight
               Text(
-                _countWeight.toString(),
+                _countHeight.toString(),
                 style: const TextStyle(fontWeight: FontWeight.bold),
               ),
-              // icon button to increase number of weight
+              // icon button to increase number of height
               GestureDetector(
-                onTap: _incCountWeight,
+                onTap: _incCountHeight,
                 child: const Icon(Icons.add_circle_outlined),
               ),
             ],
           ),
         ),
-        // units of weight section
+        // units of height section
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 5),
           width: 165,
@@ -75,12 +78,12 @@ class _WeightSectionState extends State<WeightSection> {
           ),
           child: DropdownButtonHideUnderline(
             child: DropdownButton(
-              value: _selectedWeightUnit,
+              value: _selectedHeightUnit,
               icon: const Icon(
                 Icons.arrow_drop_down_circle_rounded,
                 color: Colors.black,
               ),
-              items: _weightUnits
+              items: _heightUnits
                   .map(
                     (units) => DropdownMenuItem(
                       value: units,
@@ -100,12 +103,12 @@ class _WeightSectionState extends State<WeightSection> {
                   return;
                 }
                 setState(() {
-                  _selectedWeightUnit = value;
+                  _selectedHeightUnit = value;
                 });
               },
             ),
           ),
-        ),
+        )
       ],
     );
   }
