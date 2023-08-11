@@ -1,3 +1,4 @@
+import 'package:bmi_calculator/sections/weight_section.dart';
 import 'package:flutter/material.dart';
 
 import 'package:bmi_calculator/sections/gender_section.dart';
@@ -18,10 +19,11 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       body: const Padding(
-        padding: EdgeInsets.fromLTRB(18, 18, 18, 18),
+        padding: EdgeInsets.fromLTRB(25, 18, 25, 18),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
+            // app title
             Text(
               'BMI Calculator',
               style: TextStyle(
@@ -31,7 +33,29 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 30),
+            // gender section
+            Text(
+              'Gender',
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            SizedBox(height: 5),
             GenderSection(),
+            SizedBox(height: 30),
+            // weight section
+            Text(
+              'Weight',
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            SizedBox(height: 5),
+            WeightSection(),
           ],
         ),
       ),
