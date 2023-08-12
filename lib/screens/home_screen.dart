@@ -1,4 +1,5 @@
 import 'package:bmi_calculator/components/buttons.dart';
+import 'package:bmi_calculator/screens/result_screen.dart';
 import 'package:bmi_calculator/sections/age_section.dart';
 import 'package:bmi_calculator/sections/height_section.dart';
 import 'package:bmi_calculator/sections/weight_section.dart';
@@ -87,7 +88,14 @@ class HomeScreen extends StatelessWidget {
             // calculate button
             CustomButton(
               btnLabel: 'Calculate',
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ResultScreen(),
+                  ),
+                );
+              },
             ),
           ],
         ),
