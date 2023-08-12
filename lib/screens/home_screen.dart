@@ -1,3 +1,4 @@
+import 'package:bmi_calculator/components/buttons.dart';
 import 'package:bmi_calculator/sections/age_section.dart';
 import 'package:bmi_calculator/sections/height_section.dart';
 import 'package:bmi_calculator/sections/weight_section.dart';
@@ -20,13 +21,13 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: const Padding(
-        padding: EdgeInsets.fromLTRB(25, 70, 25, 18),
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(25, 70, 25, 18),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             // app title
-            Text(
+            const Text(
               'BMI Calculator',
               style: TextStyle(
                 fontSize: 30,
@@ -34,9 +35,9 @@ class HomeScreen extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             // gender section
-            Text(
+            const Text(
               'Gender',
               style: TextStyle(
                 fontSize: 15,
@@ -44,11 +45,11 @@ class HomeScreen extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            SizedBox(height: 5),
-            GenderSection(),
-            SizedBox(height: 30),
+            const SizedBox(height: 5),
+            const GenderSection(),
+            const SizedBox(height: 30),
             // weight section
-            Text(
+            const Text(
               'Weight',
               style: TextStyle(
                 fontSize: 15,
@@ -56,11 +57,11 @@ class HomeScreen extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            SizedBox(height: 5),
-            WeightSection(),
-            SizedBox(height: 30),
+            const SizedBox(height: 5),
+            const WeightSection(),
+            const SizedBox(height: 30),
             // height section
-            Text(
+            const Text(
               'Height',
               style: TextStyle(
                 fontSize: 15,
@@ -68,11 +69,11 @@ class HomeScreen extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            SizedBox(height: 5),
-            HeightSection(),
-            SizedBox(height: 30),
+            const SizedBox(height: 5),
+            const HeightSection(),
+            const SizedBox(height: 30),
             // age section
-            Text(
+            const Text(
               'Age',
               style: TextStyle(
                 fontSize: 15,
@@ -80,8 +81,14 @@ class HomeScreen extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            SizedBox(height: 5),
-            AgeSection(),
+            const SizedBox(height: 5),
+            const AgeSection(),
+            const SizedBox(height: 60),
+            // calculate button
+            CustomButton(
+              btnLabel: 'Calculate',
+              onTap: () {},
+            ),
           ],
         ),
       ),

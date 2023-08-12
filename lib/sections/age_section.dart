@@ -28,8 +28,8 @@ class _AgeSectionState extends State<AgeSection> {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 5),
-      width: double.infinity,
       height: 35,
+      width: double.infinity,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(5),
