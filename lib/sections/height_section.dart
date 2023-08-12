@@ -20,7 +20,7 @@ class _HeightSectionState extends State<HeightSection> {
   // this method is to increase the number of height
   void _incCountHeight() {
     setState(() {
-      _countHeight = _countHeight + 1;
+      _countHeight++;
     });
   }
 
@@ -28,7 +28,7 @@ class _HeightSectionState extends State<HeightSection> {
   void _decCountHeight() {
     if (_countHeight > 0) {
       setState(() {
-        _countHeight = _countHeight - 1;
+        _countHeight--;
       });
     }
   }

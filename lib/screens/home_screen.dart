@@ -1,3 +1,4 @@
+import 'package:bmi_calculator/sections/age_section.dart';
 import 'package:bmi_calculator/sections/height_section.dart';
 import 'package:bmi_calculator/sections/weight_section.dart';
 import 'package:flutter/material.dart';
@@ -69,6 +70,18 @@ class HomeScreen extends StatelessWidget {
             ),
             SizedBox(height: 5),
             HeightSection(),
+            SizedBox(height: 30),
+            // age section
+            Text(
+              'Age',
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            SizedBox(height: 5),
+            AgeSection(),
           ],
         ),
       ),

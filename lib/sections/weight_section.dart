@@ -17,7 +17,7 @@ class _WeightSectionState extends State<WeightSection> {
   // this method is to increase the number of weight
   void _incCountWeight() {
     setState(() {
-      _countWeight = _countWeight + 1;
+      _countWeight++;
     });
   }
 
@@ -25,7 +25,7 @@ class _WeightSectionState extends State<WeightSection> {
   void _decCountWeight() {
     if (_countWeight > 0) {
       setState(() {
-        _countWeight = _countWeight - 1;
+        _countWeight--;
       });
     }
   }
