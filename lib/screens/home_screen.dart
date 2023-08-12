@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(25, 70, 25, 18),
+        padding: const EdgeInsets.fromLTRB(25, 40, 25, 18),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
@@ -89,6 +89,7 @@ class HomeScreen extends StatelessWidget {
             CustomButton(
               btnLabel: 'Calculate',
               onTap: () {
+                // to move to result screen
                 Navigator.push(
                   context,
                   MaterialPageRoute(

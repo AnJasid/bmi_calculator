@@ -13,6 +13,10 @@ class MyApp extends StatelessWidget {
       home: const HomeScreen(),
       theme: ThemeData().copyWith(
         scaffoldBackgroundColor: const Color.fromARGB(255, 36, 35, 36),
+        appBarTheme: const AppBarTheme().copyWith(
+          elevation: 0,
+          backgroundColor: const Color.fromARGB(255, 36, 35, 36),
+        ),
       ),
     );
   }
