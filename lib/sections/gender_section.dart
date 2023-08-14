@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+enum Gender { male, female, none }
+
 class GenderSection extends StatefulWidget {
   const GenderSection({super.key});
 
@@ -8,18 +10,17 @@ class GenderSection extends StatefulWidget {
 }
 
 class _GenderSectionState extends State<GenderSection> {
-  String _selectedGender = '';
+  Gender selectedGender = Gender.none;
 
   @override
   Widget build(BuildContext context) {
-    print(_selectedGender);
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
         GestureDetector(
           onTap: () {
             setState(() {
-              _selectedGender = 'male';
+              selectedGender = Gender.male;
             });
           },
           child: Container(
@@ -29,7 +30,7 @@ class _GenderSectionState extends State<GenderSection> {
               borderRadius: BorderRadius.circular(10),
               color: Colors.grey[700],
               border: Border.all(
-                color: _selectedGender == 'male'
+                color: selectedGender == Gender.male
                     ? Colors.green
                     : Colors.transparent,
                 width: 3,
@@ -48,7 +49,7 @@ class _GenderSectionState extends State<GenderSection> {
                   alignment: Alignment.topRight,
                   child: Icon(
                     Icons.check,
-                    color: _selectedGender == 'male'
+                    color: selectedGender == Gender.male
                         ? Colors.green
                         : Colors.transparent,
                   ),
@@ -71,7 +72,7 @@ class _GenderSectionState extends State<GenderSection> {
         GestureDetector(
           onTap: () {
             setState(() {
-              _selectedGender = 'female';
+              selectedGender = Gender.female;
             });
           },
           child: Container(
@@ -81,7 +82,7 @@ class _GenderSectionState extends State<GenderSection> {
               borderRadius: BorderRadius.circular(10),
               color: Colors.grey[700],
               border: Border.all(
-                color: _selectedGender == 'female'
+                color: selectedGender == Gender.female
                     ? Colors.green
                     : Colors.transparent,
                 width: 3,
@@ -100,7 +101,7 @@ class _GenderSectionState extends State<GenderSection> {
                   alignment: Alignment.topRight,
                   child: Icon(
                     Icons.check,
-                    color: _selectedGender == 'female'
+                    color: selectedGender == Gender.female
                         ? Colors.green
                         : Colors.transparent,
                   ),
