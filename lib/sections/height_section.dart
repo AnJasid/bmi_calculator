@@ -70,7 +70,7 @@ class _HeightSectionState extends State<HeightSection> {
         // units of height section
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 5),
-          width: 165,
+          width: 133,
           height: 35,
           decoration: BoxDecoration(
             color: Colors.white,
@@ -92,7 +92,7 @@ class _HeightSectionState extends State<HeightSection> {
                         units,
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 14,
+                          fontSize: 11,
                         ),
                       ),
                     ),

@@ -67,7 +67,7 @@ class _WeightSectionState extends State<WeightSection> {
         // units of weight section
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 5),
-          width: 165,
+          width: 133,
           height: 35,
           decoration: BoxDecoration(
             color: Colors.white,
@@ -89,7 +89,7 @@ class _WeightSectionState extends State<WeightSection> {
                         units,
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 14,
+                          fontSize: 11,
                         ),
                       ),
                     ),
