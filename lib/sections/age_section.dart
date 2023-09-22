@@ -40,17 +40,26 @@ class _AgeSectionState extends State<AgeSection> {
         children: [
           GestureDetector(
             onTap: _decCountAge,
-            child: const Icon(Icons.do_disturb_on),
+            child: const Icon(
+              Icons.do_disturb_on,
+              color: Colors.black,
+            ),
           ),
           // show the number of age
           Text(
             _countAge.toString(),
-            style: const TextStyle(fontWeight: FontWeight.bold),
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+            ),
           ),
           // icon button to increase number of age
           GestureDetector(
             onTap: _incCountAge,
-            child: const Icon(Icons.add_circle_outlined),
+            child: const Icon(
+              Icons.add_circle_outlined,
+              color: Colors.black,
+            ),
           ),
         ],
       ),

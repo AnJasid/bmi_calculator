@@ -49,17 +49,24 @@ class _WeightSectionState extends State<WeightSection> {
               // icon button to decrease number of weight
               GestureDetector(
                 onTap: _decCountWeight,
-                child: const Icon(Icons.do_disturb_on),
+                child: const Icon(
+                  Icons.do_disturb_on,
+                  color: Colors.black,
+                ),
               ),
               // show the number of weight
               Text(
                 _countWeight.toString(),
-                style: const TextStyle(fontWeight: FontWeight.bold),
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),
               ),
               // icon button to increase number of weight
               GestureDetector(
                 onTap: _incCountWeight,
-                child: const Icon(Icons.add_circle_outlined),
+                child:
+                    const Icon(Icons.add_circle_outlined, color: Colors.black),
               ),
             ],
           ),
@@ -90,6 +97,7 @@ class _WeightSectionState extends State<WeightSection> {
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 11,
+                          color: Colors.black,
                         ),
                       ),
                     ),

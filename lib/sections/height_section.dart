@@ -52,17 +52,26 @@ class _HeightSectionState extends State<HeightSection> {
               // icon button to decrease number of height
               GestureDetector(
                 onTap: _decCountHeight,
-                child: const Icon(Icons.do_disturb_on),
+                child: const Icon(
+                  Icons.do_disturb_on,
+                  color: Colors.black,
+                ),
               ),
               // show the number of weight
               Text(
                 _countHeight.toString(),
-                style: const TextStyle(fontWeight: FontWeight.bold),
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),
               ),
               // icon button to increase number of height
               GestureDetector(
                 onTap: _incCountHeight,
-                child: const Icon(Icons.add_circle_outlined),
+                child: const Icon(
+                  Icons.add_circle_outlined,
+                  color: Colors.black,
+                ),
               ),
             ],
           ),
@@ -93,6 +102,7 @@ class _HeightSectionState extends State<HeightSection> {
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 11,
+                          color: Colors.black,
                         ),
                       ),
                     ),
