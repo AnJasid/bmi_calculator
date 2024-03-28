@@ -3,6 +3,7 @@ import 'package:bmi_calculator/screens/result_screen.dart';
 import 'package:bmi_calculator/sections/age_section.dart';
 import 'package:bmi_calculator/sections/height_section.dart';
 import 'package:bmi_calculator/sections/weight_section.dart';
+import 'package:bmi_calculator/widgets/main_drawer.dart';
 import 'package:flutter/material.dart';
 
 import 'package:bmi_calculator/sections/gender_section.dart';
@@ -14,7 +15,6 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.menu),
         actions: const <Widget>[
           Padding(
             padding: EdgeInsets.only(right: 15.0),
@@ -22,6 +22,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
+      drawer: const MainDrawer(),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(25, 40, 25, 18),
         child: Column(
